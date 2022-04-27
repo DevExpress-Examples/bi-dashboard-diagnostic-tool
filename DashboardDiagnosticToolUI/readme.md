@@ -20,17 +20,17 @@ The **Results** window displays resulting benchmarks.
 
 **Benchmark** is an object that serves for performance evaluation or comparison. Each benchmark contains the following information:
 
-Name
+- **Name**
 
-:    The benchmark name.
+  The benchmark name.
         
-Count
+- **Count**
 
-:    The number of code calls.
+  The number of code calls.
           
-MSecs
+- **MSecs**
 
-:    The code block's execution time in milliseconds.
+  The code block's execution time in milliseconds.
 
 The image below displays a log tree for a dashboard loading operation. The largest amount of time during the session takes the query execution:
      
