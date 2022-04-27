@@ -21,6 +21,10 @@ The BI Dashboard Diagnostic Tool consists of two projects:
 
   Contains the source code of the BI Dashboard Diagnostic Tool.
 
+## Prerequisites
+
+Specify your DevExpress NuGet feed autorization key in [nuget.config](./nuget.config#L7).
+
 ## Use Diagnostic Tool in the UI
 
 1. Run the Diagnostic Tool.
