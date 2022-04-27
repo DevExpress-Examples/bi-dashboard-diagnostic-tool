@@ -9,13 +9,15 @@ The BI Dashboard Diagnostic Tool is the performance monitoring system that allow
 
 ## Example Overview
 
-- [DashboardDiagnosticToolUI](./DashboardDiagnosticToolUI) (VB:)
+The BI Dashboard Diagnostic Tool consists of two projects:
 
-  A main project that contains a user interface to display and analyze your session data.
+- [DashboardDiagnosticToolUI](./DashboardDiagnosticToolUI) 
 
-  Read more: 
+  The main project that contains a user interface to display and analyze your session data.
 
-- [DiagnosticTool](./DiagnosticTool) (VB:)
+  Read more: [The Dashboard Diagnostic Tool UI](../DashboardDiagnosticToolUI/readme.md)
+
+- [DiagnosticTool](./DiagnosticTool) 
 
   Contains the source code of the BI Dashboard Diagnostic Tool.
 
@@ -83,7 +85,7 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 3. Run the code you want to diagnose.
 
-## Create and Inspect Custom Logs
+## Documentation
 
-The [DashboardTelemetry](https://docs.devexpress.com/CoreLibraries/DevExpress.DashboardCommon.Diagnostics.DashboardTelemetry) class allows the Dashboard Diagnostic Tool to create custom logs for a specific block of code.
+
 
