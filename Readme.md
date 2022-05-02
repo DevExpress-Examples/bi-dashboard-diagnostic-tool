@@ -47,26 +47,17 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 ### Windows
 
-1. Create a  `DiagnosticController` object. 
+1. Reference `DiagnosticTool.dll` and install the [Microsoft.Diagnostics.Tracing.TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/) package in your dashboard project. 
 
-2. Call the controller's `Start` method.
+2. Create a custom button and insert it to the Ribbon.
 
-3. Write code you want to diagnose.
+3. Create a `DiagnosticController` object. 
 
-4. Call the controller's  `Stop` method.
+4. Call the conroller's Start() and Stop() methods on button's click to run and finish the Dashboard Diagnostic Tool's session.
 
-5. Call the controller's `SaveAs` method to save the report. Pass the output XML file to the method.
+5. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
 
-
-``` C#
-    DiagnosticController controller = new DiagnosticController();
-    controller.Start();
-    // Your code 
-    //Thread.Sleep(1000);
-    controller.Stop();
-    controller.SaveAs("ForDiagnostic.xml");
-```
-
+6. To save the resulting report to the specified output path, call the controller's `Save()` method.
 
 ### Linux
 
@@ -92,4 +83,6 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 ## Documentation
 
 
+## Examples 
 
+[Dashboard for WinForms - Inspect the Dashboard Performance](https://github.com/DevExpress-Examples/dashboard-for-winforms-diagnose-performance)
