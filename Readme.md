@@ -59,29 +59,7 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 6. To save the resulting report to the specified output path, call the controller's `Save()` method.
 
-### Linux
-
-1. Write in the console:
-
-   ``` Bash
-        sudo apt-add-repository main
-   ```
-
-   ``` Bash
-        sudo apt-add-repository ppa:lttng/ppa
-        sudo apt-get update
-        sudo apt-get install lttng-tools lttng-modules-dkms babeltrace2
-   ```
-
-   ``` Bash
-        export COMPlus_PerfMapEnabled=1
-        export COMPlus_EnableEventLog=1
-   ```
-
-3. Run the code you want to diagnose.
-
 ## Documentation
-
 
 ## Examples 
 
