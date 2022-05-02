@@ -45,8 +45,6 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 ## Use Diagnostic Tool in Code
 
-### Windows
-
 1. Reference `DiagnosticTool.dll` and install the [Microsoft.Diagnostics.Tracing.TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/) package in your dashboard project. 
 
 2. Create a custom button and insert it to the Ribbon.
