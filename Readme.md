@@ -14,7 +14,7 @@ The BI Dashboard Diagnostic Tool consists of three projects:
 
   The main project that contains a user interface to display and analyze your session data.
 
-  Read more: [The Dashboard Diagnostic Tool UI](./DashboardDiagnosticToolUI/readme.md)
+  Read more: [The Dashboard Diagnostic Tool UI](./DashboardDiagnosticToolUI/readme.md).
 
 - [DiagnosticTool](./DiagnosticTool) 
 
