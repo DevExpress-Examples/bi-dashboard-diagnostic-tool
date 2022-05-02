@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # BI Dashboard Diagnostic Tool
 
-The BI Dashboard Diagnostic Tool is a performance monitoring system that allows you to inspect specific activities during code execution of the main DevExpress BI Dashboard's data processing areas. For example, you can estimate execution time for different operations or see the number of code calls for the session period. 
+The BI Dashboard Diagnostic Tool allows you to monitor performance of the main DevExpress BI Dashboard's data processing operations (such as data load and filter operations). You can estimate execution time for each operation or see the number of code calls for the session period.
 
 ## Example Overview
 
