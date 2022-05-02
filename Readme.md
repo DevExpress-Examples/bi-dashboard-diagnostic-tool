@@ -5,11 +5,11 @@
 <!-- default badges end -->
 # BI Dashboard Diagnostic Tool
 
-The BI Dashboard Diagnostic Tool is the performance monitoring system that allows you to inspect the specific activity during the code execution of main DevExpress BI Dashboard's data processing areas. For example, you can estimate the time of executed operations or see the number of code calls for the session period. 
+The BI Dashboard Diagnostic Tool is a performance monitoring system that allows you to inspect specific activities during code execution of the main DevExpress BI Dashboard's data processing areas. For example, you can estimate execution time for different operations or see the number of code calls for the session period. 
 
 ## Example Overview
 
-The BI Dashboard Diagnostic Tool consists of two projects:
+The BI Dashboard Diagnostic Tool consists of three projects:
 
 - [DashboardDiagnosticToolUI](./DashboardDiagnosticToolUI) 
 
@@ -20,6 +20,10 @@ The BI Dashboard Diagnostic Tool consists of two projects:
 - [DiagnosticTool](./DiagnosticTool) 
 
   Contains the source code of the BI Dashboard Diagnostic Tool.
+  
+- [DiagnosticToolTest](./DiagnosticToolTest)
+
+  For internal use. Contains the BI Dashboard Diagnostic Tool tests.
 
 ## Prerequisites
 
@@ -47,15 +51,13 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 1. Reference `DiagnosticTool.dll` and install the [Microsoft.Diagnostics.Tracing.TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/) package in your dashboard project. 
 
-2. Create a custom button and insert it to the Ribbon.
-
 3. Create a `DiagnosticController` object. 
 
-4. Call the conroller's Start() and Stop() methods on button's click to run and finish the Dashboard Diagnostic Tool's session.
+4. Call the conroller's Start() and Stop() methods to collect performance data for your code. 
 
 5. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
 
-6. To save the resulting report to the specified output path, call the controller's `Save()` method.
+6. Call the controller's `SaveAs` method to generate an XML report.
 
 ## Documentation
 
