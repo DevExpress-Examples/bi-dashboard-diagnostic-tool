@@ -40,7 +40,7 @@ Specify your DevExpress NuGet feed autorization key in [nuget.config](./nuget.co
 
 5. Save the report.
 
-You can analyze the resulting report or send it to [Support Center](https://supportcenter.devexpress.com/ticket/list) for help.
+You can analyze the resulting report or send it to [Support Center](https://supportcenter.devexpress.com/ticket/list) for assistance.
 
 The following GIF image illustrates how to use the Diagnostic Tool to examine the performance of the dashboard load operation:
 
@@ -50,13 +50,13 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 1. Reference `DiagnosticTool.dll` and install the [Microsoft.Diagnostics.Tracing.TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/) package in your dashboard project. 
 
-3. Create a `DiagnosticController` object. 
+2. Create a `DiagnosticController` object. 
 
-4. Call the conroller's `Start` and `Stop` methods to collect performance data for your code. 
+3. Call the conroller's `Start` and `Stop` methods to collect performance data for your code. 
 
-5. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
+4. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
 
-6. Call the controller's `SaveAs` method to generate an XML report.
+5. Call the controller's `SaveAs` method to generate an XML report.
 
 ## Documentation
 
