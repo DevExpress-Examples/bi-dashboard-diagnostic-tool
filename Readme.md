@@ -36,7 +36,7 @@ Specify your DevExpress NuGet feed autorization key in [nuget.config](./nuget.co
 
 3. Run the code you want to diagnose.
 
-4. Click **Stop Session** after the code complied. Wait for the log tree to be built.
+4. Click **Stop Session** after the code is compiled. Wait until a log tree is built.
 
 5. Save the report.
 
