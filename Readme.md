@@ -53,7 +53,7 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 3. Create a `DiagnosticController` object. 
 
-4. Call the conroller's Start() and Stop() methods to collect performance data for your code. 
+4. Call the conroller's `Start` and `Stop` methods to collect performance data for your code. 
 
 5. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
 
