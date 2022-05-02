@@ -40,7 +40,7 @@ Specify your DevExpress NuGet feed autorization key in [nuget.config](./nuget.co
 
 5. Save the report.
 
-You can analyze the resulting report or send it to [Support Centre](https://supportcenter.devexpress.com/ticket/list) for help.
+You can analyze the resulting report or send it to [Support Center](https://supportcenter.devexpress.com/ticket/list) for help.
 
 The following GIF image illustrates how to use the Diagnostic Tool to examine the performance of the dashboard load operation:
 
