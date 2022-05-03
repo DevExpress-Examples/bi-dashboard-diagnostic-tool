@@ -36,7 +36,7 @@ Specify your DevExpress NuGet feed autorization key in [nuget.config](./nuget.co
 
 3. Run the code you want to diagnose.
 
-4. Click **Stop Session** after the code is compiled. Wait until a log tree is built.
+4. Click **Stop Session** after the code is compiled. Wait until the log tree is built.
 
 5. Save the report.
 
@@ -52,9 +52,9 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 2. Create a `DiagnosticController` object. 
 
-3. Call the conroller's `Start` and `Stop` methods to collect performance data for your code. 
+3. Call the controller's `Start` and `Stop` methods to collect performance data for your code. 
 
-4. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's contructor. 
+4. Implement the `IFileController` interface and specify the output file path in the `TrySaveFile` method. Pass a new class instance that implements `IFileController` to the controller's constructor. 
 
 5. Call the controller's `SaveAs` method to generate an XML report.
 

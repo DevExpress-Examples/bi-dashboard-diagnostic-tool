@@ -4,7 +4,7 @@ The Diagnostic Tool contains a user interface to display and analyze your sessio
 
 ![Dashboard Diagnostic Tool main window](../images/diagnistic-tool-main.png)
 
-The sections below describe main parts of the Dashboard Diagnostic Tool interface.
+The sections below describe the main parts of the Dashboard Diagnostic Tool interface.
 
 ## Sessions
 
