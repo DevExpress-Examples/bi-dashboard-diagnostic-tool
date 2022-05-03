@@ -4,7 +4,7 @@ The Diagnostic Tool contains a user interface to display and analyze your sessio
 
 ![Dashboard Diagnostic Tool main window](../images/diagnistic-tool-main.png)
 
-The following sections describe main parts of the Dashboard Diagnostic Tool interface:
+The sections below describe the main parts of the Dashboard Diagnostic Tool interface.
 
 ## Sessions
 
@@ -12,13 +12,13 @@ The **Sessions** window shows created sessions and allows you to navigate betwee
 
 ![Dashboard Diagnostic Tool Sessions](../images/sessions-window.png)
 
-A **Session** is a correlation of all actions executed in a certain time period. When you start session, the Dashboard Diagnostic Tool is monitoring the executed code and collects actions for each event of an event session. After you stop session, the Dashboard Diagnostic Tool generates a log tree. You can inspect it in the UI or save the resulting report. The report is serialized in XML format and can be opened in the Dashboard Diagnostic Tool. 
+A **session** contains all actions executed in a specific time period. When you start a session, the Dashboard Diagnostic Tool monitors the executed code and collects actions for each session event. After you stop the session, the Dashboard Diagnostic Tool generates a log tree. You can inspect logs in the UI or save the resulting report in XML format.
 
 ## Results 
 
 The **Results** window displays resulting benchmarks.
 
-**Benchmark** is an object that serves for performance evaluation or comparison. Each benchmark contains the following information:
+**Benchmarks** are used to measure and compare performance. Each benchmark contains the following information:
 
 - **Name**
 
@@ -32,7 +32,7 @@ The **Results** window displays resulting benchmarks.
 
   The code block's execution time in milliseconds.
 
-The image below displays a log tree for a dashboard loading operation. The largest amount of time during the session takes the query execution:
+The image below displays a log tree for a dashboard load operation. The most time-consuming task of this session is the query execution.
      
 ![Dashboard Diagnostic Tool results](../images/results-window.png)
 
@@ -52,10 +52,10 @@ The main menu contains the following commands:
 
     ![Diagnostic Tool file options](../images/file-options.png)
 
-    The File menu allows you to save sessions in a report. The report is saved in XML format. Click **Open** to open the existing report. To close the program, select **Exit**.
+    The File menu allows you to save session data in an XML report. Click **Open** to load an existing report. Select **Exit** to close the program.
 
 - **Diagnostic** 
 
     ![Diagnostic Tool diagnostic options](../images/diagnistic-options.png)
 
-    The Diagnostic menu allows you to manage sessions. Click **Start Session** to create a new session. **Stop Session** ends the session and generates a log tree. To delete the session, select it and use **Delete** command.
+    The **Diagnostic** menu allows you to manage sessions. Click **Start Session** to create a new session. **Stop Session** ends the session and generates a log tree. Click **Delete** to delete the selected session.
