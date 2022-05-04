@@ -18,28 +18,38 @@ namespace DashboardDiagnosticTool.Data {
         }
 
         public Dictionary<int, List<BenchmarkItem>> GetBenchmarks() {
-            Dictionary<int, List<BenchmarkItem>> answer = new Dictionary<int, List<BenchmarkItem>>();
+            Dictionary<int, List<BenchmarkItem>> benchmarksBySessionId = new Dictionary<int, List<BenchmarkItem>>();
+            foreach(var session in Sessions)
+                benchmarksBySessionId.Add(session.ID, new List<BenchmarkItem>());
             Benchmarks.ForEach(benchmark => {
                 int sessionId = benchmark.SessionId;
-                if(!answer.ContainsKey(sessionId))
-                    answer.Add(sessionId, new List<BenchmarkItem>());
-                answer[sessionId].Add(benchmark);
+                if(!benchmarksBySessionId.TryGetValue(sessionId, out var benchmarkItems)) {
+                    benchmarkItems = new List<BenchmarkItem>();
+                    benchmarksBySessionId.Add(sessionId, benchmarkItems);
+                }
+                benchmarkItems.Add(benchmark);
             });
-            return answer;
+            return benchmarksBySessionId;
         }
 
         public Dictionary<int, Dictionary<int, List<TraceItem>>> GetTraceItems() {
-            Dictionary<int, Dictionary<int, List<TraceItem>>> answer = new Dictionary<int, Dictionary<int, List<TraceItem>>>();
+            Dictionary<int, Dictionary<int, List<TraceItem>>> traceItemsBySessionId = new Dictionary<int, Dictionary<int, List<TraceItem>>>();
+            foreach(var session in Sessions)
+                traceItemsBySessionId.Add(session.ID, new Dictionary<int, List<TraceItem>>());
             TraceItems.ForEach(traceItem => {
                 int sessionId = traceItem.SessionId;
                 int threadId = traceItem.ThreadId;
-                if(!answer.ContainsKey(sessionId))
-                    answer.Add(sessionId, new Dictionary<int, List<TraceItem>>());
-                if(!answer[sessionId].ContainsKey(threadId))
-                    answer[sessionId].Add(threadId, new List<TraceItem>());
-                answer[sessionId][threadId].Add(traceItem);
+                if(!traceItemsBySessionId.TryGetValue(sessionId, out var traceItemsByThreadId)) {
+                    traceItemsByThreadId = new Dictionary<int, List<TraceItem>>();
+                    traceItemsBySessionId.Add(sessionId, traceItemsByThreadId);
+                }
+                if(!traceItemsByThreadId.TryGetValue(threadId, out var traceItems)) {
+                    traceItems = new List<TraceItem>();
+                    traceItemsByThreadId.Add(threadId, traceItems);
+                }
+                traceItems.Add(traceItem);
             });
-            return answer;
+            return traceItemsBySessionId;
         }
     }
 }
