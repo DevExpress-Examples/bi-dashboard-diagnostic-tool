@@ -61,6 +61,8 @@ The following GIF image illustrates how to use the Diagnostic Tool to examine th
 
 ## Documentation
 
+[BI Dashboard Diagnostic Tool](https://docs.devexpress.com/Dashboard/403867/basic-concepts-and-terminology/bi-dashboard-performance/bi-dashboard-diagnostic-tool)
+
 ## Examples 
 
 [Dashboard for WinForms - Inspect the Dashboard Performance](https://github.com/DevExpress-Examples/dashboard-for-winforms-diagnose-performance)
