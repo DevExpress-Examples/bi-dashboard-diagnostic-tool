@@ -25,10 +25,6 @@ The BI Dashboard Diagnostic Tool consists of three projects:
 
   For internal use. Contains the BI Dashboard Diagnostic Tool tests.
 
-## Prerequisites
-
-Specify your DevExpress NuGet feed authorization key in [nuget.config](./nuget.config#L7).
-
 ## Use Diagnostic Tool in the UI
 
 1. Run the Diagnostic Tool.
