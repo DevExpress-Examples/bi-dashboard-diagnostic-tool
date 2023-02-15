@@ -90,7 +90,7 @@ namespace DashboardDiagnosticToolUI {
             });
         }
         Point GetWaitLocation(Rectangle waitRect) {
-            var rect = RectHelper.AlignRectangle(waitRect, ClientRectangle, ContentAlignment.MiddleCenter);
+            var rect = RectHelper.AlignRectangle(waitRect, ClientRectangle, DevExpress.XtraPrinting.ImageAlignment.MiddleCenter);
             return PointToScreen(rect.Location);
         }
         void OnEndProcessing() {
