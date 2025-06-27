@@ -45,9 +45,6 @@ namespace DashboardDiagnosticToolUI {
                 case "delete":
                     controller.Delete((SessionItem)args[0]);
                     break;
-                case "about":
-                    DevExpress.Utils.About.AboutHelper.Show(DevExpress.Utils.About.ProductKind.XtraReports);
-                break;
             }
         }
 
@@ -65,8 +62,6 @@ namespace DashboardDiagnosticToolUI {
                     return controller.CanHandleCommand(ControllerCommand.Stop);
                 case "delete":
                     return controller.CanHandleCommand(ControllerCommand.Delete);
-                case "about":
-                    return true;
             }
             return false;
         }
@@ -236,6 +231,17 @@ namespace DashboardDiagnosticToolUI {
                 var item = treeListBenchmark.GetDataRecordByNode(x) as BenchmarkItem;
                 if(item != null) action(x, item);
             });
+        }
+        private void barItemViewHelp_ItemClick(object sender,ItemClickEventArgs e) {
+            string helpUrl = "https://docs.devexpress.com/Dashboard/403867/basic-concepts-and-terminology/bi-dashboard-performance/bi-dashboard-diagnostic-tool"; // replace with your real article URL
+            try {
+                System.Diagnostics.Process.Start(new ProcessStartInfo {
+                    FileName = helpUrl,
+                    UseShellExecute = true
+                });
+            } catch (Exception ex) {
+                MessageBox.Show("Unable to open help page. " + ex.Message);
+            }
         }
     }
 

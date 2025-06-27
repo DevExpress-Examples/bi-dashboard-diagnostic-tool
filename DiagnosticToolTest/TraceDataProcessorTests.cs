@@ -23,7 +23,7 @@ namespace DiagnosticToolTest {
                 GetConfiguredPayload(threadId, "TraceEvent", TraceEventType.Information, data)
             );
         }
-        static Func<string, object> GetConfiguredPayload(int threadId, string methodName, TraceEventType? eventType, string? data = null) {
+        static Func<string, object> GetConfiguredPayload(int threadId, string methodName, TraceEventType? eventType, string data = null) {
             return (string name) => {
                 switch(name) {
                     case "Id":

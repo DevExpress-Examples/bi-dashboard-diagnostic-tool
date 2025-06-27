@@ -33,7 +33,6 @@
             this.barItemDelete = new DevExpress.XtraBars.BarButtonItem();
             this.barItemHelp = new DevExpress.XtraBars.BarSubItem();
             this.barItemViewHelp = new DevExpress.XtraBars.BarButtonItem();
-            this.barItemAbout = new DevExpress.XtraBars.BarButtonItem();
             this.barStatus = new DevExpress.XtraBars.Bar();
             this.barItemStatus = new DevExpress.XtraBars.BarStaticItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -174,8 +173,7 @@
             this.barItemStop,
             this.barItemDelete,
             this.barItemHelp,
-            this.barItemViewHelp,
-            this.barItemAbout});
+            this.barItemViewHelp});
             this.barManager.MainMenu = this.barMainMenu;
             this.barManager.MaxItemId = 15;
             this.barManager.StatusBar = this.barStatus;
@@ -283,9 +281,6 @@
             // 
             this.barItemHelp.Caption = "Help";
             this.barItemHelp.Id = 12;
-            this.barItemHelp.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barItemViewHelp),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barItemAbout)});
             this.barItemHelp.Name = "barItemHelp";
             // 
             // barItemViewHelp
@@ -295,14 +290,7 @@
             this.barItemViewHelp.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barItemViewHelp.ImageOptions.SvgImage")));
             this.barItemViewHelp.Name = "barItemViewHelp";
             this.barItemViewHelp.Tag = "Help";
-            // 
-            // barItemAbout
-            // 
-            this.barItemAbout.Caption = "About";
-            this.barItemAbout.Id = 14;
-            this.barItemAbout.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barItemAbout.ImageOptions.SvgImage")));
-            this.barItemAbout.Name = "barItemAbout";
-            this.barItemAbout.Tag = "About";
+            this.barItemViewHelp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barItemViewHelp_ItemClick);
             // 
             // barStatus
             // 
@@ -587,6 +575,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colData;
         private DevExpress.XtraBars.BarSubItem barItemHelp;
         private DevExpress.XtraBars.BarButtonItem barItemViewHelp;
-        private DevExpress.XtraBars.BarButtonItem barItemAbout;
     }
 }
