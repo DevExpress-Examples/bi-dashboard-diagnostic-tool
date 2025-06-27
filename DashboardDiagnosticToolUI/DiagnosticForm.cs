@@ -46,8 +46,8 @@ namespace DashboardDiagnosticToolUI {
                     controller.Delete((SessionItem)args[0]);
                     break;
                 case "about":
-                    AboutHelper.Show(ProductKind.XtraReports, ProductInfoHelper.GetProductInfo(ProductKind.XtraReports));
-                    break;
+                    DevExpress.Utils.About.AboutHelper.Show(DevExpress.Utils.About.ProductKind.XtraReports);
+                break;
             }
         }
 
