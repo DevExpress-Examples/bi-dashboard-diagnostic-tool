@@ -33,7 +33,6 @@
             this.barItemDelete = new DevExpress.XtraBars.BarButtonItem();
             this.barItemHelp = new DevExpress.XtraBars.BarSubItem();
             this.barItemViewHelp = new DevExpress.XtraBars.BarButtonItem();
-            this.barItemAbout = new DevExpress.XtraBars.BarButtonItem();
             this.barStatus = new DevExpress.XtraBars.Bar();
             this.barItemStatus = new DevExpress.XtraBars.BarStaticItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -77,58 +76,49 @@
             // 
             // treeListBenchmark
             // 
+            this.treeListBenchmark.ChildListFieldName = "Children";
             this.treeListBenchmark.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colBMName,
             this.colBMCount,
             this.colBMSecs});
             this.treeListBenchmark.DataSource = this.bindingSourceBenchmark;
-            this.treeListBenchmark.ChildListFieldName = "Children";
             this.treeListBenchmark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListBenchmark.Location = new System.Drawing.Point(0, 0);
-            this.treeListBenchmark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.treeListBenchmark.MinWidth = 23;
             this.treeListBenchmark.Name = "treeListBenchmark";
             this.treeListBenchmark.OptionsBehavior.Editable = false;
             this.treeListBenchmark.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.treeListBenchmark.OptionsView.FocusRectStyle = DevExpress.XtraTreeList.DrawFocusRectStyle.None;
             this.treeListBenchmark.OptionsView.ShowIndicator = false;
             this.treeListBenchmark.OptionsView.ShowSummaryFooter = true;
-            this.treeListBenchmark.Size = new System.Drawing.Size(819, 437);
+            this.treeListBenchmark.Size = new System.Drawing.Size(674, 329);
             this.treeListBenchmark.TabIndex = 0;
-            this.treeListBenchmark.TreeLevelWidth = 21;
             this.treeListBenchmark.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListBenchmark_FocusedNodeChanged);
             this.treeListBenchmark.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDown);
             // 
             // colBMName
             // 
             this.colBMName.FieldName = "Name";
-            this.colBMName.MinWidth = 23;
             this.colBMName.Name = "colBMName";
             this.colBMName.Visible = true;
             this.colBMName.VisibleIndex = 0;
-            this.colBMName.Width = 87;
             // 
             // colBMCount
             // 
             this.colBMCount.FieldName = "Count";
-            this.colBMCount.MinWidth = 23;
             this.colBMCount.Name = "colBMCount";
             this.colBMCount.Visible = true;
-            this.colBMCount.VisibleIndex = 2;
-            this.colBMCount.Width = 87;
+            this.colBMCount.VisibleIndex = 1;
             // 
             // colBMSecs
             // 
             this.colBMSecs.FieldName = "MSecs";
             this.colBMSecs.Format.FormatString = "{0:0.0}";
             this.colBMSecs.Format.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.colBMSecs.MinWidth = 23;
             this.colBMSecs.Name = "colBMSecs";
             this.colBMSecs.SummaryFooter = DevExpress.XtraTreeList.SummaryItemType.Sum;
             this.colBMSecs.SummaryFooterStrFormat = "Total: {0:0,0.0}";
             this.colBMSecs.Visible = true;
-            this.colBMSecs.VisibleIndex = 3;
-            this.colBMSecs.Width = 87;
+            this.colBMSecs.VisibleIndex = 2;
             // 
             // dockManager
             // 
@@ -174,8 +164,7 @@
             this.barItemStop,
             this.barItemDelete,
             this.barItemHelp,
-            this.barItemViewHelp,
-            this.barItemAbout});
+            this.barItemViewHelp});
             this.barManager.MainMenu = this.barMainMenu;
             this.barManager.MaxItemId = 15;
             this.barManager.StatusBar = this.barStatus;
@@ -284,8 +273,7 @@
             this.barItemHelp.Caption = "Help";
             this.barItemHelp.Id = 12;
             this.barItemHelp.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barItemViewHelp),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barItemAbout)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barItemViewHelp)});
             this.barItemHelp.Name = "barItemHelp";
             // 
             // barItemViewHelp
@@ -295,14 +283,7 @@
             this.barItemViewHelp.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barItemViewHelp.ImageOptions.SvgImage")));
             this.barItemViewHelp.Name = "barItemViewHelp";
             this.barItemViewHelp.Tag = "Help";
-            // 
-            // barItemAbout
-            // 
-            this.barItemAbout.Caption = "About";
-            this.barItemAbout.Id = 14;
-            this.barItemAbout.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barItemAbout.ImageOptions.SvgImage")));
-            this.barItemAbout.Name = "barItemAbout";
-            this.barItemAbout.Tag = "About";
+            this.barItemViewHelp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barItemViewHelp_ItemClick);
             // 
             // barStatus
             // 
@@ -329,55 +310,49 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1027, 25);
+            this.barDockControlTop.Size = new System.Drawing.Size(880, 20);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 650);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 528);
             this.barDockControlBottom.Manager = this.barManager;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1027, 27);
+            this.barDockControlBottom.Size = new System.Drawing.Size(880, 22);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
             this.barDockControlLeft.Manager = this.barManager;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 625);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 508);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1027, 25);
+            this.barDockControlRight.Location = new System.Drawing.Point(880, 20);
             this.barDockControlRight.Manager = this.barManager;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 625);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 508);
             // 
             // panelSession
             // 
             this.panelSession.Controls.Add(this.dockPanel1_Container);
             this.panelSession.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.panelSession.ID = new System.Guid("f086354d-9202-4dd1-beae-521e60004ff5");
-            this.panelSession.Location = new System.Drawing.Point(0, 25);
-            this.panelSession.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelSession.Location = new System.Drawing.Point(0, 20);
             this.panelSession.Name = "panelSession";
             this.panelSession.OriginalSize = new System.Drawing.Size(200, 200);
-            this.panelSession.Size = new System.Drawing.Size(200, 625);
+            this.panelSession.Size = new System.Drawing.Size(200, 508);
             this.panelSession.Text = "Sessions";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.treeListSession);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 32);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(3, 26);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(190, 589);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(193, 479);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // treeListSession
@@ -387,8 +362,6 @@
             this.treeListSession.DataSource = this.bindingSourceSession;
             this.treeListSession.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListSession.Location = new System.Drawing.Point(0, 0);
-            this.treeListSession.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.treeListSession.MinWidth = 23;
             this.treeListSession.Name = "treeListSession";
             this.treeListSession.OptionsBehavior.Editable = false;
             this.treeListSession.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -397,21 +370,18 @@
             this.treeListSession.OptionsView.ShowHorzLines = false;
             this.treeListSession.OptionsView.ShowIndicator = false;
             this.treeListSession.OptionsView.ShowVertLines = false;
-            this.treeListSession.Size = new System.Drawing.Size(190, 589);
+            this.treeListSession.Size = new System.Drawing.Size(193, 479);
             this.treeListSession.TabIndex = 1;
-            this.treeListSession.TreeLevelWidth = 21;
             this.treeListSession.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListSession_FocusedNodeChanged);
             this.treeListSession.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDown);
             // 
             // colSSName
             // 
             this.colSSName.FieldName = "Name";
-            this.colSSName.MinWidth = 23;
             this.colSSName.Name = "colSSName";
             this.colSSName.OptionsColumn.ReadOnly = true;
             this.colSSName.Visible = true;
             this.colSSName.VisibleIndex = 0;
-            this.colSSName.Width = 87;
             // 
             // bindingSourceSession
             // 
@@ -422,32 +392,28 @@
             this.panelEvents.Controls.Add(this.controlContainer1);
             this.panelEvents.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
             this.panelEvents.ID = new System.Guid("d5d6f4ee-da0b-416b-81b7-8daf7baae03d");
-            this.panelEvents.Location = new System.Drawing.Point(200, 500);
-            this.panelEvents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelEvents.Location = new System.Drawing.Point(200, 378);
             this.panelEvents.Name = "panelEvents";
             this.panelEvents.OriginalSize = new System.Drawing.Size(200, 150);
-            this.panelEvents.Size = new System.Drawing.Size(827, 150);
+            this.panelEvents.Size = new System.Drawing.Size(680, 150);
             this.panelEvents.Text = "Events";
             // 
             // controlContainer1
             // 
             this.controlContainer1.Controls.Add(this.gridEvent);
-            this.controlContainer1.Location = new System.Drawing.Point(4, 34);
-            this.controlContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.controlContainer1.Location = new System.Drawing.Point(3, 27);
             this.controlContainer1.Name = "controlContainer1";
-            this.controlContainer1.Size = new System.Drawing.Size(819, 112);
+            this.controlContainer1.Size = new System.Drawing.Size(674, 120);
             this.controlContainer1.TabIndex = 0;
             // 
             // gridEvent
             // 
             this.gridEvent.DataSource = this.bindingSourceEvent;
             this.gridEvent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridEvent.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridEvent.Location = new System.Drawing.Point(0, 0);
             this.gridEvent.MainView = this.gridView;
-            this.gridEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridEvent.Name = "gridEvent";
-            this.gridEvent.Size = new System.Drawing.Size(819, 112);
+            this.gridEvent.Size = new System.Drawing.Size(674, 120);
             this.gridEvent.TabIndex = 0;
             this.gridEvent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -462,12 +428,12 @@
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colEventType,
             this.colData});
-            this.gridView.DetailHeight = 431;
             this.gridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.gridView.GridControl = this.gridEvent;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsCustomization.AllowSort = false;
+            this.gridView.OptionsEditForm.PopupEditFormWidth = 686;
             this.gridView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView.OptionsView.ShowGroupPanel = false;
             this.gridView.OptionsView.ShowIndicator = false;
@@ -475,47 +441,41 @@
             // colEventType
             // 
             this.colEventType.FieldName = "EventType";
-            this.colEventType.MinWidth = 23;
             this.colEventType.Name = "colEventType";
             this.colEventType.Visible = true;
             this.colEventType.VisibleIndex = 0;
-            this.colEventType.Width = 87;
             // 
             // colData
             // 
             this.colData.FieldName = "Data";
-            this.colData.MinWidth = 23;
             this.colData.Name = "colData";
             this.colData.Visible = true;
             this.colData.VisibleIndex = 1;
-            this.colData.Width = 87;
             // 
             // panelResult
             // 
             this.panelResult.Controls.Add(this.dockPanel2_Container);
             this.panelResult.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
             this.panelResult.ID = new System.Guid("5ba4a236-9f40-46cb-bd6e-cf89edce4c63");
-            this.panelResult.Location = new System.Drawing.Point(200, 25);
-            this.panelResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelResult.Location = new System.Drawing.Point(200, 20);
             this.panelResult.Name = "panelResult";
             this.panelResult.OriginalSize = new System.Drawing.Size(680, 200);
-            this.panelResult.Size = new System.Drawing.Size(827, 475);
+            this.panelResult.Size = new System.Drawing.Size(680, 358);
             this.panelResult.Text = "Results";
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.treeListBenchmark);
-            this.dockPanel2_Container.Location = new System.Drawing.Point(4, 32);
-            this.dockPanel2_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel2_Container.Location = new System.Drawing.Point(3, 26);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(819, 437);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(674, 329);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // DiagnosticForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 677);
+            this.ClientSize = new System.Drawing.Size(880, 550);
             this.Controls.Add(this.panelSession);
             this.Controls.Add(this.panelResult);
             this.Controls.Add(this.panelEvents);
@@ -524,7 +484,6 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DiagnosticForm.IconOptions.SvgImage")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DiagnosticForm";
             this.Text = "Dashboard Diagnostic Tool";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBenchmark)).EndInit();
@@ -587,6 +546,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colData;
         private DevExpress.XtraBars.BarSubItem barItemHelp;
         private DevExpress.XtraBars.BarButtonItem barItemViewHelp;
-        private DevExpress.XtraBars.BarButtonItem barItemAbout;
     }
 }
